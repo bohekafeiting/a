@@ -12,3 +12,4 @@ function thounsands_separators(a)
 	 }
   return x1 + x2;
 }
+module.exports = thousands_separators;
