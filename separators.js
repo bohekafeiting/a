@@ -1,15 +1,11 @@
 // JavaScript Document
 function thounsands_separators(a)
 {
-   a += '';
-   x = a.split('.');
-   x1 = x[0]; 
-   x2 = x.length > 1 ? '.' + x[1] : ''; 
-   var rgx = /(\d+)(\d{3})/;
-   while (rgx.test(x1))
-    { 
-	   x1 = x1.replace(rgx, '$1' + ',' + '$2'); 
-	 }
-  return x1 + x2;
+   num+='';
+  var y=num.indexOf('.'); 
+  m=Math.floor(num);
+  st=m+'';
+  st=st.split('').reverse().join('').replace(/(\d{3})/g,'$1,').replace(/\,$/,'').split('').reverse().join('');
+  return (st+num.substring(y));
 }
 module.exports = thousands_separators;
